@@ -1,0 +1,7 @@
+server {
+
+    server_name _;
+    listen 80;
+    access_log /var/log/nginx/access.log;
+    return 301 $REDIRECT_TARGET$request_uri;
+}
