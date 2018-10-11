@@ -2,3 +2,5 @@
 Simple nginx container that 301 redirects all requests
 
 Set $REDIRECT_TARGET to base url to redirect to
+
+/nginx-health returns 200 
