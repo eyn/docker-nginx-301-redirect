@@ -3,10 +3,13 @@ server {
     server_name _;
     listen 80;
     access_log /var/log/nginx/access.log;
-    return 301 $REDIRECT_TARGET$request_uri;
 
     location /nginx-health {
         access_log off;
         return 200 "healthy\n";
+    }
+
+    location / {
+        return 301 $REDIRECT_TARGET$request_uri;
     }
 }
